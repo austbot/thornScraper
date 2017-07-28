@@ -13,5 +13,5 @@ You should see the list of links first then the projects.
 ## My Approach
 
 I decided to use node, streams and try to use point free functional style.
-The actual code is in lib where the glue is in index.
+The actual code is in lib where the glue is in the index.
 The purpose of this was for all of the real logic to be split up into small functions that are easily testable, and the glue is very simple.
