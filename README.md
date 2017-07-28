@@ -1,7 +1,10 @@
 #Thorn Scraping Exam
 
+## Prerequisite
+Make sure you are on Node.js version 8. Use NVM if you want multiple versions of node installed
+https://github.com/creationix/nvm Node 8 is needed since it is the stable node and I use the es6 features of said version.
+
 ##Install
-Make sure you are on Node.js version 8. USe NVM if you want multiple versions fof node installed
 `npm install`
 
 ## Run
