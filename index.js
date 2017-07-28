@@ -15,14 +15,16 @@ pageStream.fork() //Fork so the processing of both tasks is done at the same tim
     .flatMap(document => _(getUrls(document)))
     //now that urls are emitting one by one, filter out same page
     .filter(pageFilter)
-    .each((p) => {
-        console.log(p)
+    .collect()
+    .each((links) => {
+        console.log(JSON.stringify({links: links}));
     });
 
 pageStream.fork()
     .flatMap(document => {
         return _(findProjects(document))
     })
-    .each((p) => {
-        console.log(p.title, " " , p.desc, "\n")
+    .collect()
+    .each((projects) => {
+        console.log(JSON.stringify(projects));
     });

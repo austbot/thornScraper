@@ -26,7 +26,7 @@ exports.projectFilter = (element) => element.querySelector("h3 a");
 exports.toProject = (element) => {
     const title = element.querySelector("h3 a").rawText;
     const desc = element.querySelector("p").rawText;
-    return {title, desc}
+    return {title, desc};
 };
 
 exports.findProjects = (document) => {
