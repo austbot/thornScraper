@@ -1,0 +1,17 @@
+{
+  "name": "thornscraper",
+  "version": "1.0.0",
+  "description": "Scraper for Thorn",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "author": "Austin Adams me@austbot.com",
+  "license": "ISC",
+  "dependencies": {
+    "fast-html-parser": "^1.0.1",
+    "highland": "^2.11.1",
+    "request": "^2.81.0",
+    "ramda": "^0.24.1"
+  }
+}
