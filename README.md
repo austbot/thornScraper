@@ -4,14 +4,11 @@
 Make sure you are on Node.js version 8. Use NVM if you want multiple versions of node installed
 https://github.com/creationix/nvm Node 8 is needed since it is the stable node and I use the es6 features of said version.
 
-##Install
+## Install
 `npm install`
 
 ## Run
 `node index.js`
-
-## Output
-You should see the list of links first then the projects.
 
 ## My Approach
 

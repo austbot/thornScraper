@@ -9,22 +9,20 @@ const pageStream = getPage$(urlToBeScraped)
 //Get a dom
     .map(raw => parser.parse(raw.toString()));
 
-pageStream.fork() //Fork so the processing of both tasks is done at the same time.
-//Select A Tags and get hrefs and return as stream
-// Flatmap new stream so that items in that stream ie the url array will emit one by one
+pageStream.fork()
+    //Select A Tags and get hrefs and return as stream
+    // Flatmap new stream so that items in that stream ie the url array will emit one by one
     .flatMap(document => _(getUrls(document)))
     //now that urls are emitting one by one, filter out same page
     .filter(pageFilter)
+    //Bring it back into an array for shoving into json
     .collect()
     .each((links) => {
         console.log(JSON.stringify({links: links}));
     });
 
-pageStream.fork()
-    .flatMap(document => {
-        return _(findProjects(document))
-    })
-    .collect()
+pageStream.fork() //Fork so the processing of both tasks is done at the same time.
+    .map(document => findProjects(document))
     .each((projects) => {
         console.log(JSON.stringify(projects));
     });
