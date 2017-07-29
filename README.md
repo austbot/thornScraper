@@ -1,4 +1,4 @@
-#Thorn Scraping Exam
+# Thorn Scraping Exam
 
 ## Prerequisite
 Make sure you are on Node.js version 8. Use NVM if you want multiple versions of node installed
