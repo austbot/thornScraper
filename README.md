@@ -13,5 +13,5 @@ https://github.com/creationix/nvm Node 8 is needed since it is the stable node a
 ## My Approach
 
 I decided to use node, streams and try to use point free functional style.
-The actual code is in lib where the glue is in the index.
+The actual logic is in lib,js, and the glue is in the index.js.
 The purpose of this was for all of the real logic to be split up into small functions that are easily testable, and the glue is very simple.
